@@ -1,16 +1,16 @@
 name: build
 
 on:
-  # 当有pr合到main和release分支时，开始构建，大项目一般都是pr合并，不允许直接提交到master分支
+  # 当有pr合到master和release分支时，开始构建
   pull_request:
     branches:
       - master
       - release-*
 
-  # 当有直接推到main分支时，开始构建。一般不允许直接提交到master分支
+  # 当有直接推到master分支时，开始构建。一般不允许直接提交到master分支
   push:
     branches:
-      - main 
+      - master 
 
 jobs:
   buildbuild:
